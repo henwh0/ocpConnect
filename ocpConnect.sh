@@ -36,7 +36,7 @@ echo "+----------------------------------------+"
 echo ""
 sleep 0.3
 # Starting screen session
-screen $DEVICE $BAUD_RATE || echo "An error ocurred: $?"
+screen $DEVICE $BAUD_RATE || echo "An error occurred: $?"
 
 # ***** ******** (FRC)
 
