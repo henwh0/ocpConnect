@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #Set variables
-DEVICE="YOUR DEVICE ID HERE"
+DEVICE="YOUR_DEVICE_ID_HERE"
 BAUD_RATE=57600
 # Check if custom baud rate was entered
 if [[ $# == 1 ]]; then
@@ -9,20 +9,24 @@ if [[ $# == 1 ]]; then
 fi
 # Check that custom baud rate is a number within range
 if ! [[ $BAUD_RATE =~ ^[0-9]+$ ]] || ((BAUD_RATE < 9600 || BAUD_RATE > 115200)); then
-    echo "Baud Rate must be a number between 9600 and 115200."
+    echo "Baud Rate must be a number between 9600 and 115200. Default value is 57600."
     exit 1
 fi
 # Preparing to start screen session
 echo "Ensure that your device variable is correct."
 echo "Ensure that you have selected the correct host."
+echo "To exit the screen session, press 'Ctrl + Shift + A', then enter ':quit'"
 read -r -p "Press 'Enter' to start the screen session.."
 echo ""
+# Box width inside pipes
+BOX_WIDTH=38
+# Print the box
 echo "+--------------------------------------+"
-echo "|            Screen Session            |"
+echo "|----------  Screen Session  ----------|"
 echo "+--------------------------------------+"
-echo "| $USER"
-echo "| Device: $DEVICE"
-echo "| Baud Rate: $BAUD_RATE"
+printf "| User: %-30s |\n" "$USER"
+printf "| Device: %-28s |\n" "$DEVICE"
+printf "| Baud Rate: %-25s |\n" "$BAUD_RATE"
 echo "+--------------------------------------+"
 echo ""
 sleep 0.3
