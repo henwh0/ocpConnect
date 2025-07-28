@@ -23,7 +23,6 @@ echo "Ensure that you have selected the correct host."
 echo "To exit the screen session, press 'Ctrl + Shift + A', then enter ':quit'"
 read -r -p "Press 'Enter' to start the screen session.."
 echo ""
-# Box width inside pipes is 40
 # Print the box
 echo "+----------------------------------------+"
 echo "|-----------  Screen Session  -----------|"
