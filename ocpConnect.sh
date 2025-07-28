@@ -23,8 +23,7 @@ echo "Ensure that you have selected the correct host."
 echo "To exit the screen session, press 'Ctrl + Shift + A', then enter ':quit'"
 read -r -p "Press 'Enter' to start the screen session.."
 echo ""
-# Box width inside pipes
-BOX_WIDTH=40
+# Box width inside pipes is 40
 # Print the box
 echo "+----------------------------------------+"
 echo "|-----------  Screen Session  -----------|"
@@ -40,13 +39,7 @@ screen $DEVICE $BAUD_RATE || echo "An error occurred: $?"
 
 # ***** ******** (FRC)
 
-# To find your debug card identifier, open iTerm2 with the debug card connected to your laptop via USB.
-# Then execute the command: "ls /dev/tty.*"
-# The debug card should be listed as: tty.usbserial-xxxxxxxxx
-
-# Type the command to execute the script, and then type out whatever baud rate you want to use. If you don't choose your own baud rate, the script will use the default baud rate.
-# You can exit the screen session with: "Ctrl + Shift + A", then enter ":quit"
-# If you don't exit the screen session with that command, you may need to execute "screen -ls", then "kill" whatever the screen number is.
+# If you don't exit the screen session with the exit command, you may need to execute "screen -ls", then "kill" whatever the screen number is.
 
 
 # Type the command to execute the script, and then type out whatever baud rate you want to use. If you don't choose your own baud rate, the script will use the default baud rate.
