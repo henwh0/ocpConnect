@@ -34,7 +34,7 @@ printf "| Device: %-30s |\n" "$DEVICE"
 printf "| Baud Rate: %-27s |\n" "$BAUD_RATE"
 echo "+----------------------------------------+"
 echo ""
-sleep 0.3
+sleep 1.5
 # Starting screen session
 screen $DEVICE $BAUD_RATE || echo "An error occurred: $?"
 
