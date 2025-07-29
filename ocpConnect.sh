@@ -20,7 +20,7 @@ if ! [[ $BAUD_RATE =~ ^[0-9]+$ ]] || ((BAUD_RATE < 9600 || BAUD_RATE > 115200));
 fi
 # Preparing to start screen session
 echo "Ensure that you have selected the correct host."
-echo "To exit the screen session, press 'Ctrl + Shift + A', then enter ':quit'"
+echo "To exit the screen session, press 'Ctrl + A', then enter ':quit'"
 read -r -p "Press 'Enter' to start the screen session.."
 echo ""
 # Print the box / 40 characters in between pipes.
