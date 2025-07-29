@@ -39,8 +39,3 @@ screen $DEVICE $BAUD_RATE || echo "An error occurred: $?"
 # ***** ******** (FRC)
 
 # If you don't exit the screen session with the exit command, you may need to execute "screen -ls", then "kill" whatever the screen number is.
-
-
-# Type the command to execute the script, and then type out whatever baud rate you want to use. If you don't choose your own baud rate, the script will use the default baud rate.
-# You can exit the screen session with: "Ctrl + Shift + A", then enter ":quit"
-# If you don't exit the screen session with that command, you may need to execute "screen -ls", then "kill" whatever the screen number is.
