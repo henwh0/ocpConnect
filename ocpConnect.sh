@@ -22,7 +22,7 @@ if [[ "$1" == "-h" || "$1" == "--help" ]]; then
 fi
 
 # Assign variables
-DEVICE=$(ls /dev/tty.usberial-* 2>/dev/null | head -n 1)
+DEVICE=$(ls /dev/tty.usbserial-* 2>/dev/null | head -n 1)
 BAUD_RATE=57600
 
 # Check that device exists
